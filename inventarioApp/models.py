@@ -19,6 +19,7 @@ class Mueble(models.Model):
     fondo = models.IntegerField()
     descripcion = models.CharField(max_length=250, blank=True)
     tipo_mueble = models.ForeignKey(TipoMueble, on_delete=models.PROTECT)
+    cantidad = 0
 
     def __str__(self):
         return self.codigo
